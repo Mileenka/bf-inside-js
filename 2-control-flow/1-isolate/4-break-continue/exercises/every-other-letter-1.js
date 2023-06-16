@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -7,19 +5,14 @@ console.log('-- begin --');
 const word = 'pitsicola';
 
 let index = 0;
-let logThisOne = true;
-while (index < _._) {
-  index += 1;
-
-  logThisOne = !logThisOne;
-  if (!_) {
-    _;
-  }
-
+while (index < word.length) {
   const nextLetter = word[index];
-  console.log(index + ': ', nextLetter); // i, s, c, l
+  if (nextLetter === 'i' || nextLetter === 's' || nextLetter === 'c' || nextLetter === 'l') {
+    console.log(index + ': ', nextLetter); // i, s, c, l
+  }
+  index += 1;
 }
 
-console.assert(index === _._, 'there are this many letters in the word');
+console.assert(index === word.length, 'there are this many letters in the word');
 
 console.log('-- end --');

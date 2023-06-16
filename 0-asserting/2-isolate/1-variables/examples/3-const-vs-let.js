@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -20,7 +18,7 @@ console.log('-- begin --');
 // const variables also cannot be reassigned
 // this will throw an error
 //  "Assignment to constant variable"
-const constantVariable2 = 'constant value';
+let constantVariable2 = 'constant value'; // change const for let
 constantVariable2 = 'new value';
 console.log(constantVariable2);
 

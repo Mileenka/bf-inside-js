@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /*
@@ -8,62 +6,48 @@
   - compare the user input to the random phrase
 */
 
-const instructions =
-  'Remembery, the game of remembering.\n\n' +
-  'You will be prompted to enter 3 phrases.\n' +
-  'next you will be prompted to remember one of them\n\n' +
-  'if you enter it exactly, you win!';
+const instructions = `Two-Player Remembery
+
+  Player 1:
+    enter three phrases
+
+  Player 2:
+    see the three phrases in order
+    then enter them back in order
+    if you get one wrong - game over!
+`;
 alert(instructions);
 
-let input1 = null;
-while (input1 === '' || input1 === null) {
-  input1 = prompt('enter your first secret phrase:');
-  console.log('input1:', typeof input1, input1);
-}
-let input2 = null;
-while (input2 === '' || input2 === null) {
-  input2 = prompt('enter your second secret phrase:');
-  console.log('input2:', typeof input2, input2);
-}
-let input3 = null;
-while (input3 === '' || input3 === null) {
-  input3 = prompt('enter your third secret phrase:');
-  console.log('input3:', typeof input3, input3);
-}
+alert('Player 2: go hide');
 
-alert('all saved! get ready to remember');
+const phrase1 = prompt('Player 1, enter your first phrase:');
+const phrase2 = prompt('Player 1, enter your second phrase:');
+const phrase3 = prompt('Player 1, enter your third phrase:');
 
-// generate a random number: 1, 2 or 3
-const randomDecimal = Math.random();
-const decimalTimes3 = randomDecimal * _;
-const randomFrom1To3 = Math.ceil(decimalTimes3);
+alert('Player 2, get back here');
 
-console.log('randomFrom1To3:', typeof randomFrom1To3, randomFrom1To3);
+const phrasesToRemember = `Player 2, remember these:
+  1. "${phrase1}"
+  2. "${phrase2}"
+  3. "${phrase3}"
+`;
+alert(phrasesToRemember);
 
-// assign the randomly selected input to a new variable
-// this variable will be used later for comparing
-let phraseToGuess = '';
-if (randomFrom1To3 === 3) {
-  _;
-} else if (randomFrom1To3 === 2) {
-  _;
-} else if (randomFrom1To3 === 1) {
-  _;
-} else {
-  console.log('unreachable!');
-  console.log('the number will always be 1, 2 or 3');
+let points = 3;
+
+const guess1 = prompt('Player 2, enter your guess for phrase 1:');
+if (guess1 !== phrase1) {
+  points = 0;
 }
 
-const guessMessage = '_ ' + randomFrom1To3;
-const userGuess = prompt(guessMessage);
-console.log('userGuess:', typeof userGuess, userGuess);
-
-// does the user's guess exactly match the random phrase?
-const guessIsCorrect = _;
-console.log('guessMessage:', typeof guessMessage, guessMessage);
-
-if (guessIsCorrect) {
-  alert('correct! phrase ' + randomFrom1To3 + ' was "' + phraseToGuess + '"');
-} else {
-  alert('nope :(');
+const guess2 = prompt('Player 2, enter your guess for phrase 2:');
+if (guess2 !== phrase2) {
+  points = 0;
 }
+
+const guess3 = prompt('Player 2, enter your guess for phrase 3:');
+if (guess3 !== phrase3) {
+  points = 0;
+}
+
+alert(`Your score: ${points}`);

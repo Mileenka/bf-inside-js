@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -21,15 +19,15 @@ console.log('-- begin --');
 
 */
 
-const toRepeat = '_';
+const toRepeat = 'howdy';
 const totalRepetitions = 4;
 
 let repeatedString = '';
 
-for (_; i < _; _) {
-  repeatedString += _;
-  console.log(repeatedString);
+for (let i = totalRepetitions; i > 0; i--) {
+  repeatedString += toRepeat;
 }
+  console.log(repeatedString);
 
 console.assert(
   repeatedString === 'howdyhowdyhowdyhowdy',

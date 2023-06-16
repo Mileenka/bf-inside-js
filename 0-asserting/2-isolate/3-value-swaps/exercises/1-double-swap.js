@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -14,13 +12,13 @@ let temp;
 
 // --- test final values ---
 
-const test1 = a === 'x';
+const test1 = b === 'x';
 console.assert(test1, 'Test 1');
 
-const test2 = b === 'y';
+const test2 = a === 'y';
 console.assert(test2, 'Test 2');
 
-const test3 = temp === _;
+const test3 = temp === undefined;
 console.assert(test3, 'Test 3');
 
 console.log('-- end --');
