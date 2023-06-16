@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -27,12 +25,11 @@ let repeatedString = '';
   used to count the number of times the string has been repeated
 */
 let i = 0;
-while (_) {
-  repeatedString = _;
-  console.log(repeatedString);
-
-  _; // i should grow by 1
+while (i < 4) {
+  repeatedString += toRepeat;
+  i++; // i should grow by 1
 }
+  console.log(repeatedString);
 
 console.assert(
   repeatedString === 'howdyhowdyhowdyhowdy',

@@ -1,11 +1,9 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
 
 const word = 'pitsicola';
-const targetLetter = _;
+const targetLetter = 'c'; // Replace '_' with the target letter
 
 let index = 0;
 while (true) {
@@ -13,7 +11,7 @@ while (true) {
   console.log(index + ': ' + nextLetter);
 
   if (nextLetter === targetLetter) {
-    _;
+    break; // Exit the loop if the target letter is found
   }
 
   index += 1;

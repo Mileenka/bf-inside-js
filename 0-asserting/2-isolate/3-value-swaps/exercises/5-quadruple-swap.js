@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -14,6 +12,26 @@ let temp;
 
 // --- swap values ---
 
+temp = a;
+console.assert(temp === 'y', 'Step 1.1');
+console.assert(a === 'y', 'Step 1.2');
+
+a = b;
+console.assert(a === 'w', 'Step 2.1');
+console.assert(b === 'w', 'Step 2.2');
+
+b = d;
+console.assert(b === 'x', 'Step 3.1');
+console.assert(d === 'x', 'Step 3.2');
+
+d = c;
+console.assert(d === 'z', 'Step 4.1');
+console.assert(c === 'z', 'Step 4.2');
+
+c = temp;
+console.assert(c === 'y', 'Step 5.1');
+console.assert(temp === 'y', 'Step 5.2');
+
 // --- test final values ---
 
 console.assert(a === 'w', 'Test 1');
@@ -24,6 +42,6 @@ console.assert(c === 'y', 'Test 3');
 
 console.assert(d === 'z', 'Test 4');
 
-console.assert(temp === _, 'Test 5');
+console.assert(temp === 'y', 'Test 5');
 
 console.log('-- end --');

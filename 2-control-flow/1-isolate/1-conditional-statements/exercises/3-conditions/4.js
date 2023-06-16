@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 console.log('-- begin --');
@@ -15,11 +13,11 @@ const value2 = 200;
 const value3 = false;
 let path = '';
 
-if (_) {
+if (typeof value1 === typeof value2) {
   path = 'if';
-} else if (_) {
+} else if (typeof value2 === typeof value3) {
   path = 'else if 1';
-} else if (_) {
+} else if (Number(value1) === Number(value2) ){
   path = 'else if 2';
 } else {
   path = 'else';
