@@ -26,7 +26,7 @@ const vowels = 'aeiouAEIOU';
 const consonants = 'bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ';
 
 // use `removeCharacters` to create a new value for `removified`
-const removified = __ ? __ : __;
+const removified = removeCharacters(vowels, consonants) ? removeVowels : original ;
 
 alert(`before: ${original}
 after: ${removified}`);

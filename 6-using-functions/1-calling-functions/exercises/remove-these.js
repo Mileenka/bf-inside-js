@@ -23,7 +23,10 @@ while (removeThese === null) {
 }
 
 // use `removeCharacters` to create a new value assigned to `removified`
-__;
+
+const removified = removeCharacters(removeThese);
 
 alert(`before: ${original}
 after: ${removified}`);
+
+console.log(removified)
