@@ -1,7 +1,7 @@
-// #todo
-
 debugger;
+
+console.log('executing index.js');
 
 import { user } from './user.js';
 
-console.assert(user === _, 'Test 1');
+console.assert(user === 'Marko', 'Test 1');
