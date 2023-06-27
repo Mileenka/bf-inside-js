@@ -1,5 +1,3 @@
-// #todo
-
 'use strict';
 
 /**
@@ -10,15 +8,16 @@
  * @param {number} [toSkip=0] - How often to skip a character.
  * @returns {string} The text with missing characters.
  */
+
 const skipCharacters = (text = '', toSkip = 0) => {
-  if (toSkip < _) {
-    return _;
+  if (toSkip < 1) {
+    return text;
   }
 
   let skipified = '';
-  for (_; _; _) {
-    if (i % toSkip !== 0) {
-      __;
+  for (let i = 0; i < text.length; i++) {
+    if ((i + text.length) % toSkip !== 0) {
+      skipified += text[i];
     }
   }
   return skipified;

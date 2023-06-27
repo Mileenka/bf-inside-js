@@ -1,11 +1,19 @@
 /**
- * replaces a specific entry in an array
- * this function does not modify the original array
+ * Replaces a specific entry in an array.
+ * This function does not modify the original array.
  *
- * @param {Array} [arr=[]] - an array of items, one will be changed
- * @param {number} [index=0] - the index to replace
- * @param {any} newEntry - the value to put at that index
+ * @param {Array} [arr=[]] - An array of items, one will be changed.
+ * @param {number} [index=0] - The index to replace.
+ * @param {any} newEntry - The value to put at that index.
  *
- * @returns {Array} a copy of the array with one entry modified
+ * @returns {Array} - A copy of the array with one entry modified.
  */
-export const replaceEntry = () => {};
+export const replaceEntry = (arr = [], index = 0, newEntry) => {
+  if (index < 0 || index >= arr.length) {
+    return [...arr];
+  }
+
+  const newArray = [...arr];
+  newArray[index] = newEntry;
+  return newArray;
+};
