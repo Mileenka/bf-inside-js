@@ -1,4 +1,4 @@
-import { firstNegativeNumber } from '../sabotag.js';
+import { firstNegativeNumber } from './sabotag.js';
 
 describe('firstNegativeNumber: returns the first falsy string', () => {
   describe('it correctly sums the entries', () => {
